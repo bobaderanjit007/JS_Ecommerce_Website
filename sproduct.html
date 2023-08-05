@@ -31,9 +31,9 @@
 
     <section id="pro-details" class="sectoin-p1 single-product-con">
         <div class="single-pro-image">
-            <img src="img/products/f1.jpg" width="100%" id="main-img" alt="main image">
+            <img id="pro-img" src="img/products/f1.jpg" width="100%" id="main-img" alt="main image">
 
-            <div class="small-img-group">
+            <!-- <div class="small-img-group">
                 <div class="small-img-col">
                     <img src="img/products/f1.jpg" width="100%" alt="" class="small-img">
                 </div>
@@ -46,23 +46,9 @@
                 <div class="small-img-col">
                     <img src="img/products/f4.jpg" width="100%" alt="" class="small-img">
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="single-pro-details">
-            <h6>Home / T-Shirt</h6>
-            <h4>Men's Fashion T Shirts</h4>
-            <h2>1139.00</h2>
-            <select >
-                <option value="Select Size">Select Size</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
-                <option value="s">Small</option>
-                <option value="L">Large</option>
-            </select>
-            <input type="number" value="1">
-            <button class="normal">Add To Cart</button>
-            <h4>Product Details</h4>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nihil qui maiores modi nobis aperiam aliquid exercitationem sapiente doloremque facere consequuntur possimus, ut dolor, cupiditate expedita quasi alias non hic quibusdam, minima optio! Dolorum distinctio mollitia blanditiis ex laborum, ducimus porro! Necessitatibus suscipit, corrupti, aspernatur molestias inventore qui vero debitis deserunt sed minus corporis. Nulla.</span>
+        <div id="shop-pro-details" class="single-pro-details">
         
         </div>
     </section>
@@ -200,21 +186,8 @@
         </div>
     </footer>
 
-    <script>
-
-        let mainImgEl = document.getElementById("main-img");
-        let smallImgEl = document.querySelectorAll(".small-img")
-
-        smallImgEl.forEach(element => {
-            element.addEventListener("mouseover",()=>{
-                mainImgEl.src = element.src;
-            })
-        });
-
-    </script>
-
 </body>
 
-<script src="script.js"></script>
+<script type="module" src="sproduct.js"></script>
 
 </html>

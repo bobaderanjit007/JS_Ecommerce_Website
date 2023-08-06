@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
+
     <section id="header">
         <a href=""><img src="img/logo.png" alt=""></a>
 
@@ -46,31 +49,8 @@
                     <td>Subtotal</td>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td><a href=""><i class="far fa-times-circle"></i></a></td>
-                    <td><img src="img/products/f1.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$118.19</td>
-                </tr>
-                <tr>
-                    <td><a href=""><i class="far fa-times-circle"></i></a></td>
-                    <td><img src="img/products/f2.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$118.19</td>
-                </tr>
-                <tr>
-                    <td><a href=""><i class="far fa-times-circle"></i></a></td>
-                    <td><img src="img/products/f3.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$118.19</td>
-                </tr>
+            <tbody id="cart-body">
+
             </tbody>
         </table>
     </section>
@@ -85,19 +65,7 @@
         </div>
         <div id="subtotal">
             <h3>Cart Totals</h3>
-            <table>
-                <tr>
-                    <td>Cart Subtotal</td>
-                    <td>$ 335</td>
-                </tr>
-                <tr>
-                    <td>Cart Subtotal</td>
-                    <td>$ 335</td>
-                </tr>
-                <tr>
-                    <td><strong>Total</strong></td>
-                    <td><strong>$ 335</strong></td>
-                </tr>
+            <table id="table-body">
             </table>
             <button class="normal">Procced to checkout</button>
         </div>
@@ -156,6 +124,39 @@
 
 </body>
 
-<script src="script.js"></script>
+<script>
+    const delBtn = document.querySelectorAll(".delll");
+
+    function delData(id) {
+        // Step 1: Retrieve existing data from localStorage
+        const existingData = localStorage.getItem('MyCart'); // Replace 'myData' with the actual key you use
+
+        if (existingData) {
+            // Step 2: Convert the JSON string back to an array of objects
+            const dataArray = JSON.parse(existingData);
+        
+
+            // Step 3: Find and remove the specific item with the given id
+            const filteredDataArray = dataArray.filter(item => item.id !== id);
+
+            // Step 4: Save the modified data back to localStorage
+            localStorage.setItem('MyCart', JSON.stringify(filteredDataArray));
+
+            console.log(`Deleted item with id ${id}`);
+            console.log('Updated data in localStorage:', filteredDataArray);
+            // This will reload the current page
+            window.location.reload();
+
+        } else {
+            console.log('No data found in localStorage.');
+        }
+    }
+
+
+
+
+
+</script>
+<script type="module" src="cart.js"></script>
 
 </html>

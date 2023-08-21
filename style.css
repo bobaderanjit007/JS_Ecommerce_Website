@@ -1093,6 +1093,11 @@ footer{
 
 @media (max-width: 477px){
 
+
+    /* #hero{
+        background-image: url("img/heroms.png");
+    } */
+
     .section-p1{
         padding: 20px;
     }
@@ -1114,7 +1119,7 @@ footer{
 
     #feature .fe-box{
         width: 155px;
-        margin: 0 0 15px 0;
+        margin: 0 0 15px 9px;
     }
 
     #product1 .pro{

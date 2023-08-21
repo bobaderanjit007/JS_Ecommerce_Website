@@ -690,70 +690,9 @@ footer{
         display: none;
     }
 
-}
-
-@media (max-width: 477px){
-
-    .section-p1{
-        padding: 20px;
-    }
-
-    #header{
-        padding: 10px 30px;
-    }
-
-    h1{
-        font-size: 38px;
-    }
-    h2{
-        font-size: 32px;
-    }
-    #hero{
-        padding: 0 20px;
-        background-position: 55%;
-    }
-
-    #feature .fe-box{
-        width: 155px;
-        margin: 0 0 15px 0;
-    }
-
-    #product1 .pro{
-        width: 100%;
-    }
-
-    #banner{
-        height: 40vh;
-    }
-
-    #sm-banner .banner-box{
-        height: 40vh;
-    }
-
-    #sm-banner .banner-box2{
-        margin-top: 20px;
-    }
-
-    #banner3{
-        padding: 0 20px;
-    }
-
-    #banner3 .banner-box{
-        width: 100%;
-    }
-
-    #newsletter{
-        padding: 40px 20px;
-    }
-
-    #newsletter .form{
-        width: 100%;
-    }
-    footer .copyright{
-        text-align: start;
-    }
     
 }
+
 
 #close{
     display: none;
@@ -1148,4 +1087,145 @@ footer{
     padding: 8px;
     font-size: 14px;
     position: absolute;
+}
+
+
+
+@media (max-width: 477px){
+
+    .section-p1{
+        padding: 20px;
+    }
+
+    #header{
+        padding: 10px 30px;
+    }
+
+    h1{
+        font-size: 38px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    #hero{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    #feature .fe-box{
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+
+    #product1 .pro{
+        width: 100%;
+    }
+
+    #banner{
+        height: 40vh;
+    }
+
+    #sm-banner .banner-box{
+        height: 40vh;
+    }
+
+    #sm-banner .banner-box2{
+        margin-top: 20px;
+    }
+
+    #banner3{
+        padding: 0 20px;
+    }
+
+    #banner3 .banner-box{
+        width: 100%;
+    }
+
+    #newsletter{
+        padding: 40px 20px;
+    }
+
+    #newsletter .form{
+        width: 100%;
+    }
+    footer .copyright{
+        text-align: start;
+    }
+
+    /* About Page */
+
+    .section-p1 {
+        flex-direction: column;
+    }
+    #about-head img{
+        width: 100%;
+    }
+
+    #about-head div {
+        padding-left: 0;
+        text-align:center
+    }
+
+    /* contact us page */
+    #contact-details .details {
+        width: 100%;
+    }
+    #contact-details .map {
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    #form-details{
+        flex-direction: column;
+        padding: 10px;
+        margin:20px;
+    }
+
+    #form-details form{
+        width: 100%;
+    }
+    #form-details form button{
+        margin-bottom: 20px;
+    }
+
+    #form-details .people div{
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* cart page */
+    #cart{
+        overflow: scroll;
+    }
+    #coupon{
+        width: 100%;
+    }
+    #subtotal{
+        width: 100%;
+    }
+
+    /* sproduct page */
+
+    #pro-details{
+        flex-direction: column;
+    }
+    #pro-details .single-pro-image{
+        width: 100%;
+    }
+    #pro-details .single-pro-details{
+        width: 100%;
+        padding: 10px;
+    }
+
+    #hero #feature{
+        flex-direction: row;
+    }
+
+    #feature {
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-columns: repeat(2 1fr);
+        justify-content:center;
+    }
 }
